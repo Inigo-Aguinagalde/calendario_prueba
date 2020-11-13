@@ -22,19 +22,11 @@ class _CuadroHoraWidgetState extends State<WidgetCuadroHora> {
               color: Colors.blue, border: new Border.all(color: Colors.black)),
           child: Column(
             children: [
-              Expanded(
-                  child: Container(
-                width: 0,
-                height: 0,
-              )),
-              Text('${widget.item.horaComienzo}'),
-              Text('-'),
-              Text('${widget.item.horaTerminar}'),
-              Expanded(
-                  child: Container(
-                width: 0,
-                height: 0,
-              )),
+              Padding(
+                padding: EdgeInsets.all(14.0),
+                child: Text(
+                    '${widget.item.horaComienzo} \n${widget.item.horaTerminar}'),
+              ),
             ],
           ),
         )

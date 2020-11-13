@@ -24,8 +24,11 @@ class _CuadroWidgetState extends State<WidgetCuadro> {
             height: 58,
             child: Column(
               children: [
-                Text('${widget.item.asignatura}'),
-                Text('${widget.item.profesor}'),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                      '${widget.item.profesor} \n${widget.item.asignatura}'),
+                ),
               ],
             ),
             decoration: BoxDecoration(
@@ -55,20 +58,9 @@ class _RecreoWidgetState extends State<WidgetRecreo> {
         Container(
           width: 70,
           height: 68,
-          child: Column(
-            children: [
-              Expanded(
-                  child: Container(
-                width: 0,
-                height: 0,
-              )),
-              Text('${widget.item.recreo}'),
-              Expanded(
-                  child: Container(
-                width: 0,
-                height: 0,
-              )),
-            ],
+          child: Align(
+            alignment: Alignment.center,
+            child: Text('${widget.item.recreo}'),
           ),
         )
       ],

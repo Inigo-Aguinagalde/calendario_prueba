@@ -21,20 +21,9 @@ class _DiaWidgetState extends State<WidgetDia> {
           decoration: BoxDecoration(
               color: widget.item.color,
               border: new Border.all(color: Colors.black)),
-          child: Column(
-            children: [
-              Expanded(
-                  child: Container(
-                width: 0,
-                height: 0,
-              )),
-              Text('${widget.item.DiaSemana}'),
-              Expanded(
-                  child: Container(
-                width: 0,
-                height: 0,
-              )),
-            ],
+          child: Align(
+            alignment: Alignment.center,
+            child: Text('${widget.item.DiaSemana}'),
           ),
         )
       ],
